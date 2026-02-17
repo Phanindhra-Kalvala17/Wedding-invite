@@ -1,74 +1,306 @@
 <!DOCTYPE html>
 <html lang="te">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>కల్వాల ఆహ్వానం</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>కల్వాల ఆహ్వానం | Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">కల్వాల & మందా</div>
+            <ul class="nav-menu">
+                <li><a href="#home">హోమ్</a></li>
+                <li><a href="#details">వివరాలు</a></li>
+                <li><a href="#schedule">ఎడిషన్</a></li>
+                <li><a href="#venue">వేదిక</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-<!-- 🌸 Flower Animation -->
-<div class="flower-container"></div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="flower-container"></div>
+        
+        <div class="hero-content">
+            <img src="assets/images/ganesh.png" alt="Lord Ganesha" class="ganesha">
+            
+            <h2 class="invitation-title">కల్వాల ఆహ్వానం</h2>
+            <h1 class="couple-names">కల్వాల మణితేజ 💛 మందా అఖిల</h1>
+            <p class="lagna">వృషభ లగ్నం</p>
+            <p class="wedding-date">07 Marzo 2026 | సోమవారం</p>
+            <p class="wedding-time">మధ్యాహ్నం 12:04 గంటలకు</p>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">0</span>
+                    <p>రోజులు</p>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">0</span>
+                    <p>గంటలు</p>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">0</span>
+                    <p>నిమిషాలు</p>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">0</span>
+                    <p>సెకన్లు</p>
+                </div>
+            </div>
+        </div>
 
-<!-- 🎵 Background Music -->
-<audio autoplay loop>
-  <source src="assets/music/mangala-vadyam.mp3" type="audio/mpeg">
-</audio>
+        <!-- Background Music Control -->
+        <div class="music-control">
+            <button id="musicToggle" class="music-btn">
+                <i class="fas fa-music"></i>
+            </button>
+        </div>
 
-<section class="hero">
+        <audio id="bgMusic" loop>
+            <source src="assets/music/mangala-vadyam.mp3" type="audio/mpeg">
+        </audio>
+    </section>
 
-  <!-- 🪔 Lord Ganesha -->
-  <img src="assets/images/ganesh.png" alt="Lord Ganesha" class="ganesha">
+    <!-- Details Section -->
+    <section class="details" id="details">
+        <div class="container">
+            <h2>శుభ వివాహ ఆహ్వానం</h2>
+            
+            <div class="bride-groom">
+                <div class="groom-card">
+                    <h3>వరుడు</h3>
+                    <p class="name">కల్వాల మణితేజ</p>
+                    <p>శ్రీ ఆనంద్ గారు & శ్రీమతి స్వరూప గారి కుమారుడు</p>
+                </div>
+                
+                <div class="heart-divider">💛</div>
+                
+                <div class="bride-card">
+                    <h3>వధువు</h3>
+                    <p class="name">మందా అఖిల</p>
+                    <p>లేట్ శ్రీ లక్ష్మీ నారాయణ గారు & లేట్ శ్రీమతి నాగలక్ష్మి గారి కుమార్తె</p>
+                </div>
+            </div>
 
-  <h2>కల్వాల ఆహ్వానం</h2>
-  <h1>కల్వాల మణితేజ 💛 మందా అఖిల</h1>
-  <p>వృషభ లగ్నం</p>
-  <p class="date">07 మార్చి 2026 | మధ్యాహ్నం 12:04 గంటలకు</p>
-</section>
+            <p class="invitation-message">
+                మీ ఆశీస్సులతో ఘనంగా జరగబోవుచున్నది.<br>
+                మీరు కుటుంబ సమేతంగా విచ్చేసి వధూవరులను ఆశీర్వదించవలసిందిగా మనవి.
+            </p>
+        </div>
+    </section>
 
-<section class="details">
-  <h2>శుభ వివాహ ఆహ్వానం</h2>
+    <!-- Schedule Section -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <h2>ఇవెంట్ షెడ్యూల్</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h4>స్వాగతం</h4>
+                        <p class="time">🕐 11:30 AM</p>
+                        <p>అతిథులను భోజనం సరిపెట్టడం</p>
+                    </div>
+                </div>
 
-  <p>
-    మా కుమారుడు <strong>కల్వాల మణితేజ</strong><br>
-    శ్రీ ఆనంద్ గారు & శ్రీమతి స్వరూప గారి కుమారుడు
-  </p>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h4>వివాహ మూర్తి</h4>
+                        <p class="time">🕐 12:04 PM</p>
+                        <p>వరుడు - వధువు విషయక ఫలితం</p>
+                    </div>
+                </div>
 
-  <p>
-    వారి వివాహం <br>
-    <strong>మందా అఖిల</strong> గారితో <br>
-    (లేట్ శ్రీ లక్ష్మీ నారాయణ గారు & లేట్ శ్రీమతి నాగలక్ష్మి గారి కుమార్తె)
-  </p>
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h4>వివాహ సంస్కారం</h4>
+                        <p class="time">🕐 12:30 PM</p>
+                        <p>పవిత్ర పూజా ఆచారం</p>
+                    </div>
+                </div>
 
-  <p>మీ ఆశీస్సులతో ఘనంగా జరగబోవుచున్నది.</p>
-</section>
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h4>భోజనం</h4>
+                        <p class="time">🕐 2:00 PM</p>
+                        <p>రుచిగా భోజనం చేసుకోండి</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="venue">
-  <h2>వేదిక</h2>
-  <p>
-    శ్రీ రాజ్యలక్ష్మి గార్డెన్స్ - గోదావరిఖని<br>
-    Sri Rajyalakshmi Gardens - Godavarikhani
-  </p>
+    <!-- Venue Section -->
+    <section class="venue" id="venue">
+        <div class="container">
+            <h2>వేదిక</h2>
+            
+            <div class="venue-details">
+                <div class="venue-info">
+                    <h3>శ్రీ రాజ్యలక్ష్మి గార్డెన్స్</h3>
+                    <p class="venue-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        గోదావరిఖని, తెలంగాణ
+                    </p>
+                    <p class="venue-address">Sri Rajyalakshmi Gardens, Godavarikhani</p>
+                    
+                    <div class="venue-actions">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Sri+Rajyalakshmi+Gardens+Godavarikhani" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-map"></i> గూగుల్ మ్యాప్
+                        </a>
+                        <a href="tel:+919876543210" class="btn btn-secondary">
+                            <i class="fas fa-phone"></i> సంపర్కం
+                        </a>
+                    </div>
+                </div>
 
-  <!-- 📍 Google Maps Button -->
-  <a href="https://www.google.com/maps/search/?api=1&query=Sri+Rajyalakshmi+Gardens+Godavarikhani" target="_blank" class="map-btn">
-    📍 మార్గం చూడండి
-  </a>
-</section>
+                <div class="venue-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3758.8246515889327!2d79.1234567!3d18.3456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3d5e8f8f8f8f8f%3A0x8f8f8f8f8f8f8f8f!2sGodavarikhani!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
 
-<section class="footer">
-  <p>
-    మీరు కుటుంబ సమేతంగా విచ్చేసి వధూవరులను ఆశీర్వదించవలసిందిగా మనవి.
-  </p>
-</section>
+            <!-- Additional Information -->
+            <div class="venue-info-cards">
+                <div class="info-card">
+                    <i class="fas fa-car"></i>
+                    <h4>పార్కింగ్</h4>
+                    <p>సరిపూరితమైన పార్కింగ్ సౌకర్యాలు అందించారు</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-utensils"></i>
+                    <h4>ఆహారం</h4>
+                    <p>రుచిగా భోజనం అందించవలసిందిగా ఆమంత్రణ</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-wheelchair"></i>
+                    <h4>సులభతలు</h4>
+                    <p>సూచీ చేయండి సరిపూరితమైన సలుభ్యతల కోసం</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- RSVP Section -->
+    <section class="rsvp" id="rsvp">
+        <div class="container">
+            <h2>ఆహ్వానం తీసుకోండి</h2>
+            <p class="rsvp-subtitle">దయచేసి 01 మార్చి 2026 నుండి సమాధానం ఇవ్వండి</p>
+
+            <form class="rsvp-form" id="rsvpForm">
+                <div class="form-group">
+                    <label for="name">నాల్గా పేరు *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">ఇమెయిల్ చిరునామ *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">ఫోన్ నంబర్ *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label>భోజనం సంఖ్య *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="guests" value="1" required> 1 మంది
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="guests" value="2"> 2 మంది
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="guests" value="3"> 3 మంది
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="guests" value="4"> 4 మంది
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="guests" value="5"> 5+ మంది
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>ఆహారపు ప్రధానతలు</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="preferences" value="veg"> సాహసిక
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="preferences" value="nonveg"> నాన-వెజ్
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="preferences" value="vegan"> వెగాన్
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">సందేశం (ఐచ్ఛికం)</label>
+                    <textarea id="message" name="message" rows="3" placeholder="కుమారుడికి ఆశీర్వాదాలు..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">నిర్ధారణ చేయండి</button>
+            </form>
+
+            <div class="rsvp-contact">
+                <p>ఇతర ప్రశ్నలకు సంపర్కం చేయండి:</p>
+                <p><strong>ఫోన్:</strong> +91-9876-543-210</p>
+                <p><strong>ఇమెయిల్:</strong> contact@wedding.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Section -->
+    <section class="share">
+        <div class="container">
+            <h2>చేరచేయండి</h2>
+            <p>ఈ సంతోషకరమైన సంవత్సరాన్ని మీ ప్రియులతో పంచుకోండి</p>
+            <div class="share-buttons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=#" class="share-btn facebook" target="_blank">
+                    <i class="fab fa-facebook"></i> ఫేస్‌బుక్
+                </a>
+                <a href="https://wa.me/?text=వివాహ ఆహ్వానం" class="share-btn whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> వాట్సాప్
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=#" class="share-btn twitter" target="_blank">
+                    <i class="fab fa-twitter"></i> ట్విట్టర్
+                </a>
+                <a href="mailto:?subject=వివాహ ఆహ్వానం&body=వితరణ చేయండి" class="share-btn email">
+                    <i class="fas fa-envelope"></i> ఇమెయిల్
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="container">
+            <p>మీ ఆశీస్సులు మాకు సవరణీయమైనవి 🙏</p>
+            <p class="footer-date">07 మార్చి 2026</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-
