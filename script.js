@@ -1,8 +1,9 @@
 // script.js
 
 // Countdown Timer
+let countdownInterval;
 const countdown = () => {
-    const eventDate = new Date('2026-02-17T07:50:30Z').getTime();
+    const eventDate = new Date('2026-03-07T12:04:00').getTime();
     const now = new Date().getTime();
     const distance = eventDate - now;
 
@@ -11,48 +12,72 @@ const countdown = () => {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    document.getElementById('days').innerHTML = days;
+    document.getElementById('hours').innerHTML = hours;
+    document.getElementById('minutes').innerHTML = minutes;
+    document.getElementById('seconds').innerHTML = seconds;
 
     if (distance < 0) {
-        clearInterval(x);
-        document.getElementById('countdown').innerHTML = 'EVENT HAS STARTED';
+        clearInterval(countdownInterval);
+        document.getElementById('days').innerHTML = '0';
+        document.getElementById('hours').innerHTML = '0';
+        document.getElementById('minutes').innerHTML = '0';
+        document.getElementById('seconds').innerHTML = '0';
     }
 };
 
-setInterval(countdown, 1000);
+countdown();
+countdownInterval = setInterval(countdown, 1000);
 
 // Music Control
-const audio = new Audio('path_to_your_music.mp3');
-const playButton = document.getElementById('play');
-const pauseButton = document.getElementById('pause');
+const audio = document.getElementById('bgMusic');
+const musicToggle = document.getElementById('musicToggle');
 
-playButton.addEventListener('click', () => {
-    audio.play();
-});
-
-pauseButton.addEventListener('click', () => {
-    audio.pause();
-});
+if (musicToggle) {
+    musicToggle.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            musicToggle.classList.add('playing');
+        } else {
+            audio.pause();
+            musicToggle.classList.remove('playing');
+        }
+    });
+}
 
 // RSVP Form
-const rsvpForm = document.getElementById('rsvp-form');
+const rsvpForm = document.getElementById('rsvpForm');
 
-rsvpForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const name = event.target.name.value;
-    const attending = event.target.attending.checked;
-    alert(`Thank you ${name} for your RSVP! Attending: ${attending}`);
+if (rsvpForm) {
+    rsvpForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const guests = event.target.guests.value;
+        alert(`Thank you ${name} for your RSVP! Number of guests: ${guests}`);
+        // Reset form
+        rsvpForm.reset();
+    });
+}
+
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
 });
 
-// Animations
-const animateElement = (element) => {
-    element.style.transition = 'transform 0.5s';
-    element.style.transform = 'scale(1.1)';
-    setTimeout(() => {
-        element.style.transform = 'scale(1)';
-    }, 500);
-};
+// Mobile menu toggle
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
 
-const elementToAnimate = document.getElementById('animate');
-
-elementToAnimate.addEventListener('mouseover', () => animateElement(elementToAnimate));
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+}
