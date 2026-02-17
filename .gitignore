@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Development
+.vscode/settings.json
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Build outputs
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Server files (for local development only)
+server.js
