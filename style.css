@@ -1,0 +1,25 @@
+.wedding-invitation {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f3e5;
+    color: #4b3f3f;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #d4c1a9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.wedding-invitation h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.wedding-invitation p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.wedding-invitation .details {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 15px;
+}
