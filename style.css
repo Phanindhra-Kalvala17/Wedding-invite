@@ -1,25 +1,83 @@
-.wedding-invitation {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f3e5;
-    color: #4b3f3f;
-    padding: 20px;
+.hero {
+    background-image: url('hero-bg.jpg');
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+nav {
+    background-color: #000;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.countdown {
+    font-size: 2em;
+    color: #FF4081;
+}
+
+.card {
+    background: white;
     border-radius: 10px;
-    border: 2px solid #d4c1a9;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 15px;
+    transition: transform 0.2s;
 }
 
-.wedding-invitation h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+.card:hover {
+    transform: scale(1.05);
 }
 
-.wedding-invitation p {
-    font-size: 18px;
-    line-height: 1.6;
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-.wedding-invitation .details {
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 15px;
+form input, form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+form input:focus {
+    border-color: #FF4081;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
