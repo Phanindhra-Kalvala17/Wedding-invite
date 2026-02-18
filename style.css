@@ -808,6 +808,10 @@ body {
         justify-content: center;
     }
 
+    .hero-image-wrapper {
+        order: 1;
+    }
+
     .hero-illustration {
         max-width: 280px;
         height: 260px;
